@@ -10,7 +10,7 @@ import psycopg2
 from datetime import timedelta
 
 conn = psycopg2.connect(
-   database="trax", user='postgres', password='devesh1234', host='127.0.0.1', port= '5432'
+   database="trax", user='postgres', password='devesh1234', host='127.0.0.1', port= '8000'
 )
 c = conn.cursor()
 
