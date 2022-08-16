@@ -10,7 +10,7 @@ import psycopg2
 from datetime import timedelta
 
 conn = psycopg2.connect(
-   database="trax", user='postgres', password='devesh1234', host='127.0.0.1', port= '8000'
+   database="zsykrjpg", user='postgres', password='hTl4Mjgl4Wl0QOmHLragl010RLsgN0eb', host='tiny.db.elephantsql.com', port= '5432'
 )
 c = conn.cursor()
 
@@ -20,25 +20,6 @@ c = conn.cursor()
 app = Flask(__name__)
 app.secret_key="hello"
 
-app.config['SQLACHEMY_DATABASE_URI']='postgresql://postgres:devesh1234@localhost/trax'
-
-app.config['SQLALCHEMY TRACK MOIFICATIONS'] = False
-db=SQLAlchemy()
-
-class user(db.Model):
-    username = db.Column(db.String(100),primary_key=True)
-    password = db.Column(db.String(100))
-    user_type = db.Column(db.String(100))
-
-    def __init__(self,username,password,user_type):
-        self.username = username
-        self.password = password
-        self.user_type = user_type
-
-
-conn = psycopg2.connect(
-   database="trax", user='postgres', password='devesh1234', host='127.0.0.1', port= '5432'
-)
 c = conn.cursor()
 
 @app.route('/', methods =["GET", "POST"])
